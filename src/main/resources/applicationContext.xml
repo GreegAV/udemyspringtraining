@@ -6,14 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
-	
     <!-- Define your beans here -->
-    
-    <!-- define the dependency -->
-    <!--<bean id="myFortuneService"-->
-    		<!--class="udemy.spring.training.HappyFortuneService">-->
-    	<!--</bean>-->
     
  	<bean id="myCoach"
  		class="udemy.spring.training.TrackCoach">
