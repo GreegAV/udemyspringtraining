@@ -8,12 +8,17 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--<bean id="myLoggerConfig" class="udemy.spring.training.MyLoggerConfig" init-method="initLogger">-->
-        <!--<property name="rootLoggerLevel" value="FINE"/>-->
-        <!--<property name="printedLoggerLevel" value="FINE"/>-->
+    <!--<property name="rootLoggerLevel" value="FINE"/>-->
+    <!--<property name="printedLoggerLevel" value="FINE"/>-->
     <!--</bean>-->
+    <bean id="myFortune"
+          class="udemy.spring.training.HappyFortuneService">
+
+    </bean>
 
     <bean id="myCoach"
-          class="udemy.spring.training.SwimCoach">
+          class="udemy.spring.training.BaseballCoach">
+        <constructor-arg ref="myFortune"/>
     </bean>
 
 

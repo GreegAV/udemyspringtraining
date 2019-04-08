@@ -5,4 +5,9 @@ public class SwimCoach implements Coach {
     public String getDailyWorkout() {
         return "Swim like a fish!";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
