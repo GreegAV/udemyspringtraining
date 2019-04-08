@@ -1,6 +1,12 @@
 package udemy.spring.training;
 
 public class SwimCoach implements Coach {
+    private FortuneService fortuneService;
+
+    public SwimCoach(FortuneService theFortuneService) {
+        fortuneService = theFortuneService;
+    }
+
     @Override
     public String getDailyWorkout() {
         return "Swim like a fish!";
@@ -8,6 +14,6 @@ public class SwimCoach implements Coach {
 
     @Override
     public String getDailyFortune() {
-        return null;
+        return "Swim better! " + fortuneService.getFortune();
     }
 }

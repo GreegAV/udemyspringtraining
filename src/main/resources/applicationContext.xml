@@ -11,14 +11,19 @@
     <!--<property name="rootLoggerLevel" value="FINE"/>-->
     <!--<property name="printedLoggerLevel" value="FINE"/>-->
     <!--</bean>-->
+    <context:property-placeholder location="sport.properties"/>
+
     <bean id="myFortune"
           class="udemy.spring.training.HappyFortuneService">
 
     </bean>
 
     <bean id="myCoach"
-          class="udemy.spring.training.BaseballCoach">
+          class="udemy.spring.training.TrackCoach">
         <constructor-arg ref="myFortune"/>
+        <property name="fortuneService" ref="myFortune"/>
+        <property name="email" value="${foo.email}"/>
+        <property name="team" value="${foo.team}"/>
     </bean>
 
 
