@@ -1,7 +1,15 @@
 package spring.demo.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
+    @Autowired
     private FortuneService fortuneService;
+    @Value("${foo.email}")
+    private String email;
+    @Value("${foo.team}")
+    private String team;
 
     public SwimCoach(FortuneService theFortuneService) {
         fortuneService = theFortuneService;
@@ -9,7 +17,7 @@ public class SwimCoach implements Coach {
 
     @Override
     public String getDailyWorkout() {
-        return "Swim 1km as a worm up.";
+        return "Swim 1000m as a worm up.";
     }
 
     @Override
